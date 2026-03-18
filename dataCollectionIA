@@ -18,7 +18,7 @@ teams = []
 d = []
 #set lists
 
-n = 1000
+n = 8000
 
 query = f"""
 query {{
@@ -83,7 +83,7 @@ for team in teams:
     #if the team is valid, then obtain proper output
 
 oldLength = len(d)
-sampleSize = 50 + 1
+sampleSize = 50 + 1 - 1
 
 if len(d) >= sampleSize:
     d = random.sample(d, sampleSize)
@@ -127,7 +127,7 @@ sampleSD = statistics.stdev(df['opr'])
 #dfClasses.to_csv("C:/Users/akaio/OneDrive/Desktop/ftc gam/data/iaDataByClasses.csv", index=False)
 #dfClasses.to_csv("C:/Users/akaio/OneDrive/Desktop/ftc gam/data/iaDataExpected.csv", index=False)
 
-df.to_csv("C:/Users/akaio/OneDrive/Desktop/ftc gam/data/iaDataIt1.csv", index=False)
+df.to_csv("C:/Users/akaio/OneDrive/Desktop/ftc gam/data/iaDataItFinal.csv", index=False)
 #bin and export data
 
 print("CSV exported!")
